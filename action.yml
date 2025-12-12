@@ -1,0 +1,16 @@
+name: Hello Custom Action
+description: A simple GitHub Action that greets the user.
+inputs:
+  name:
+    description: 'Name of the person to greet'
+    required: true
+    default: 'World'
+runs:
+  using: 'composite'
+  steps:
+    - name: Greet User
+      run: echo "Hello, ${{ inputs.name }}!"
+      shell: bash
+    - name: Run goodbye.sh
+      run: goodbye.sh
+      shell: bash
