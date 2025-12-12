@@ -12,5 +12,5 @@ runs:
       run: echo "Hello, ${{ inputs.name }}!"
       shell: bash
     - name: Run goodbye.sh
-      run: goodbye.sh
+      run: ./goodbye.sh
       shell: bash
